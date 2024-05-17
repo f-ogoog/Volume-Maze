@@ -8,7 +8,7 @@ export class UserMapper {
       id: user.id,
       username: user.username,
       email: user.email,
-      fullName: user.fullName,
+      avatar: user.avatar,
     }
   }
 }
