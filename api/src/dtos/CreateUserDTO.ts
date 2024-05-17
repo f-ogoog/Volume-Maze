@@ -14,8 +14,4 @@ export class CreateUserDTO {
   @IsNotEmpty(validationOptionsMsg('Password can not be empty'))
   @IsString(validationOptionsMsg('Password should be a string'))
   password: string;
-
-  @IsNotEmpty(validationOptionsMsg('Firstname can not be empty'))
-  @IsString(validationOptionsMsg('Firstname should be a string'))
-  fullName: string;
 }
