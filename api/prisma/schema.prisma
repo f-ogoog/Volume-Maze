@@ -14,31 +14,33 @@ datasource db {
 }
 
 model User {
-  id          String    @id @default(uuid())
-  username    String    @unique
-  email       String    @unique
-  password    String
-  avatar      String?
-  description String?
-  marks       Mark[]
-  createdAt   DateTime? @default(now()) @map("created_at")
-  updatedAt   DateTime? @default(now()) @updatedAt @map("updated_at")
+  id           String       @id @default(uuid())
+  username     String       @unique
+  email        String       @unique
+  password     String
+  avatar       String?
+  description  String?
+  marks        Mark[]
+  createdAt    DateTime?    @default(now()) @map("created_at")
+  updatedAt    DateTime?    @default(now()) @updatedAt @map("updated_at")
+  bookStatuses BookStatus[]
 
   @@map("users")
 }
 
 model Book {
-  id               String    @id @default(uuid())
+  id               String       @id @default(uuid())
   title            String
   rating           Float
   cover            String
   author           String
   category         String
-  descriptionTitle String    @map("description_title")
+  descriptionTitle String       @map("description_title")
   description      String
   marks            Mark[]
-  createdAt        DateTime? @default(now()) @map("created_at")
-  updatedAt        DateTime? @default(now()) @updatedAt @map("updated_at")
+  createdAt        DateTime?    @default(now()) @map("created_at")
+  updatedAt        DateTime?    @default(now()) @updatedAt @map("updated_at")
+  bookStatuses     BookStatus[]
 
   @@map("books")
 }
@@ -54,4 +56,23 @@ model Mark {
 
   @@id([userId, bookId])
   @@map("marks")
+}
+
+enum Status {
+  ADDED
+  READ
+}
+
+model BookStatus {
+  book      Book      @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  bookId    String    @map("book_id")
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String    @map("user_id")
+  status    Status
+  date      DateTime
+  createdAt DateTime? @default(now()) @map("created_at")
+  updatedAt DateTime? @default(now()) @updatedAt @map("updated_at")
+
+  @@id([bookId, userId])
+  @@map("book_statuses")
 }
