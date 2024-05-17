@@ -69,7 +69,7 @@ model BookStatus {
   user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId    String    @map("user_id")
   status    Status
-  date      DateTime
+  date      DateTime  @default(now())
   createdAt DateTime? @default(now()) @map("created_at")
   updatedAt DateTime? @default(now()) @updatedAt @map("updated_at")
 
