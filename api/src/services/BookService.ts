@@ -5,6 +5,7 @@ import { DatabaseUtils } from '../database/DatabaseUtils';
 import { QueryAllBooksDTO } from '../dtos/QueryAllBooksDTO';
 import { UpdateBookStatusDto } from '../dtos/UpdateBookStatusDto';
 import { UpdateBookMarkDto } from '../dtos/UpdateBookMarkDto';
+import {UpdateBookDto} from "../dtos/UpdateBookDto";
 
 @Injectable()
 export class BookService {
@@ -111,6 +112,10 @@ export class BookService {
     await this.bookRepository.updateById(bookId, {
       rating,
     });
+  }
+
+  update (bookId: string, body: UpdateBookDto) {
+    return this.bookRepository.updateById(bookId, body);
   }
 }
 

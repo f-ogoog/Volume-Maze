@@ -12,4 +12,17 @@ export class BookMapper {
       cover: book.cover,
     }));
   }
+
+  getBook (book: Book) {
+    return {
+      id: book.id,
+      title: book.title,
+      rating: book.rating,
+      author: book.author,
+      cover: book.cover,
+      category: book.category,
+      descriptionTitle: book.descriptionTitle,
+      description: book.description,
+    }
+  }
 }
