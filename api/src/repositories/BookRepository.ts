@@ -16,6 +16,21 @@ export class BookRepository {
     return this.prismaService.book.findMany(data);
   }
 
+  findById (id: string) {
+    return this.prismaService.book.findUnique({ where: { id }});
+  }
+
+  find (where: Prisma.BookWhereInput) {
+    return this.prismaService.book.findFirst({ where });
+  }
+
+  updateById (id: string, data: Prisma.BookUncheckedUpdateInput) {
+    return this.prismaService.book.update({
+      where: { id },
+      data,
+    });
+  }
+
   async count (data: Prisma.BookCountArgs) {
     return this.prismaService.book.count(
       data,
