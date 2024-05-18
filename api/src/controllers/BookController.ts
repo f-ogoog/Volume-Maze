@@ -5,6 +5,7 @@ import { BookMapper } from '../mappers/BookMapper';
 import { JwtAuthGuard } from '../utils/guards/JwtAuthGuard';
 import { BookByIdPipe } from '../BookByIdPipe';
 import { UpdateBookStatusDto } from '../dtos/UpdateBookStatusDto';
+import { UpdateBookMarkDto } from '../dtos/UpdateBookMarkDto';
 
 @Controller('/books')
 export class BookController {
@@ -32,5 +33,15 @@ export class BookController {
     @Body() body: UpdateBookStatusDto,
   ) {
     return this.bookService.changeStatus(bookId, req.user.id, body);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Patch('/:bookId/mark')
+  changeMark (
+    @Req() req,
+    @Param('bookId', BookByIdPipe) bookId: string,
+    @Body() body: UpdateBookMarkDto,
+  ) {
+    return this.bookService.changeMark(bookId, req.user.id, body);
   }
 }

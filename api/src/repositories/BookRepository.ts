@@ -16,8 +16,8 @@ export class BookRepository {
     return this.prismaService.book.findMany(data);
   }
 
-  findById (id: string) {
-    return this.prismaService.book.findUnique({ where: { id }});
+  findById (id: string, include? : Prisma.BookInclude) {
+    return this.prismaService.book.findUnique({ where: { id }, include });
   }
 
   find (where: Prisma.BookWhereInput) {
