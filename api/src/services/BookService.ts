@@ -4,6 +4,7 @@ import { Prisma } from '@prisma/client';
 import { DatabaseUtils } from '../database/DatabaseUtils';
 import { QueryAllBooksDTO } from '../dtos/QueryAllBooksDTO';
 import { UpdateBookStatusDto } from '../dtos/UpdateBookStatusDto';
+import { UpdateBookMarkDto } from '../dtos/UpdateBookMarkDto';
 
 @Injectable()
 export class BookService {
@@ -77,4 +78,39 @@ export class BookService {
       },
     });
   }
+
+  async changeMark (bookId: string, userId: string, { value }: UpdateBookMarkDto) {
+    await this.bookRepository.updateById(bookId, {
+      marks: {
+        upsert: {
+          where: {
+            userId_bookId: {
+              userId,
+              bookId,
+            },
+          },
+          create: {
+            userId,
+            value,
+          },
+          update: {
+            value,
+          },
+        },
+      },
+    });
+
+    await this.updateRating(bookId);
+  }
+
+  async updateRating (bookId: string) {
+    const book = await this.bookRepository.findById(bookId, { marks: true });
+
+    const rating = +(book.marks.reduce((sum, mark) => mark.value + sum, 0) / book.marks.length).toFixed(2);
+
+    await this.bookRepository.updateById(bookId, {
+      rating,
+    });
+  }
 }
+
