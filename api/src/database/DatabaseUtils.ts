@@ -21,6 +21,21 @@ export class DatabaseUtils {
     };
   }
 
+  static getSearchByArray (searches: string[] | object[], ...fields: string[]) {
+    if (!searches) return {};
+    const OR = [];
+
+    for (const search of searches) {
+      const element = {};
+      for (const field of fields) {
+        element[field] = search[field] ?? search;
+      }
+      OR.push(element);
+    }
+
+    return { OR };
+  }
+
   static getSort ({ sort, order = 'asc' }: SortDTO, standardField: string): Sort | object {
     if (!sort) return {
       orderBy: {

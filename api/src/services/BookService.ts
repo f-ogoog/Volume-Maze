@@ -19,7 +19,7 @@ export class BookService {
       where: {
         AND: [
           DatabaseUtils.getSearch(query, 'title', 'rating'),
-          DatabaseUtils.getStrictSearch(query.category, 'category')
+          DatabaseUtils.getSearchByArray(query.category, 'category'),
         ],
       },
       ...DatabaseUtils.getSort(query, 'title')
