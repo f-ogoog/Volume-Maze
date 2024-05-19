@@ -5,10 +5,10 @@ import { Type } from 'class-transformer';
 export class UpdateBookStatusDto {
   @IsOptional()
   @IsEnum(Status)
-    status: Status;
+    status?: Status;
 
   @IsOptional()
   @Type(() => Date)
   @IsDate()
-    date: Date;
+    date?: Date;
 }
