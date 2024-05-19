@@ -1,10 +1,11 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/common';
 import { CreateUserDTO } from '../dtos/CreateUserDTO';
 import { UserRepository } from '../repositories/UserRepository';
 import * as bcrypt from 'bcrypt';
 import { AlreadyRegisteredException } from '../utils/exceptions/AlreadyRegisteredException';
 import { JwtService } from '@nestjs/jwt';
 import { UserMapper } from '../mappers/UserMapper';
+import { UpdatePasswordDto } from '../dtos/UpdatePasswordDto';
 
 @Injectable()
 export class AuthService {
@@ -63,5 +64,20 @@ export class AuthService {
     return {
       accessToken: this.jwtService.sign(payload),
     };
+  }
+
+  async changePassword (userId, { oldPassword, newPassword }: UpdatePasswordDto ) {
+    if (oldPassword === newPassword) throw new BadRequestException('New password must be different from the old one');
+
+    const user = await this.userRepository.findById(userId);
+
+    const comperedPasswords = await bcrypt.compare(oldPassword, user.password);
+    if (!comperedPasswords) throw new BadRequestException('Password is wrong');
+
+    const password = await this.hashPassword(newPassword);
+
+    await this.userRepository.updateById(userId, {
+      password,
+    })
   }
 }
