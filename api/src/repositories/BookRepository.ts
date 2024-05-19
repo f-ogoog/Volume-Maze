@@ -24,10 +24,11 @@ export class BookRepository {
     return this.prismaService.book.findFirst({ where });
   }
 
-  updateById (id: string, data: Prisma.BookUncheckedUpdateInput) {
+  updateById (id: string, data: Prisma.BookUncheckedUpdateInput, include? : Prisma.BookInclude) {
     return this.prismaService.book.update({
       where: { id },
       data,
+      include,
     });
   }
 
