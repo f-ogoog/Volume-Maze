@@ -28,31 +28,46 @@ export class BookController {
 
   @UseGuards(JwtAuthGuard)
   @Patch('/:bookId/status')
-  changeStatus (
+  async changeStatus (
     @Req() req,
     @Param('bookId', BookByIdPipe) bookId: string,
     @Body() body: UpdateBookStatusDto,
   ) {
-    return this.bookService.changeStatus(bookId, req.user.id, body);
+    await this.bookService.changeStatus(bookId, req.user.id, body);
+    const book = await this.bookService.getById(bookId, req.user.id);
+    return this.bookMapper.getBook(book);
   }
 
   @UseGuards(JwtAuthGuard)
   @Patch('/:bookId/mark')
-  changeMark (
+  async changeMark (
     @Req() req,
     @Param('bookId', BookByIdPipe) bookId: string,
     @Body() body: UpdateBookMarkDto,
   ) {
-    return this.bookService.changeMark(bookId, req.user.id, body);
+    await this.bookService.changeMark(bookId, req.user.id, body);
+    const book = await this.bookService.getById(bookId, req.user.id);
+    return this.bookMapper.getBook(book);
   }
 
   @UseGuards(JwtAuthGuard)
   @Patch('/:bookId')
   async update (
+    @Req() req,
     @Param('bookId', BookByIdPipe) bookId: string,
     @Body() body: UpdateBookDto,
   ) {
-    const book = await this.bookService.update(bookId, body);
+    const book = await this.bookService.update(bookId, req.user.id, body);
+    return this.bookMapper.getBook(book);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Get('/:bookId')
+  async getById (
+    @Req() req,
+    @Param('bookId', BookByIdPipe) bookId: string,
+  ) {
+    const book = await this.bookService.getById(bookId, req.user.id);
     return this.bookMapper.getBook(book);
   }
 }

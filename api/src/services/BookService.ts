@@ -1,6 +1,6 @@
 import { ForbiddenException, Injectable } from '@nestjs/common';
 import { BookRepository } from '../repositories/BookRepository';
-import { Prisma } from '@prisma/client';
+import {Book, Mark, Prisma} from '@prisma/client';
 import { DatabaseUtils } from '../database/DatabaseUtils';
 import { QueryAllBooksDTO } from '../dtos/QueryAllBooksDTO';
 import { UpdateBookStatusDto } from '../dtos/UpdateBookStatusDto';
@@ -114,8 +114,36 @@ export class BookService {
     });
   }
 
-  update (bookId: string, body: UpdateBookDto) {
-    return this.bookRepository.updateById(bookId, body);
+  update (bookId: string, userId: string, body: UpdateBookDto) {
+    const where = {
+      bookId,
+      userId,
+    };
+
+    return this.bookRepository.updateById(bookId, body, {
+      bookStatuses: {
+        where,
+      },
+      marks: {
+        where,
+      },
+    });
+  }
+
+  getById (bookId: string, userId: string) {
+    const where = {
+      bookId,
+      userId,
+    };
+
+    return this.bookRepository.findById(bookId, {
+      bookStatuses: {
+        where,
+      },
+      marks: {
+        where,
+      },
+    });
   }
 }
 
