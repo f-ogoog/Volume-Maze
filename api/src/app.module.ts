@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './modules/AuthModule';
 import { MapperModule } from './modules/MapperModule';
 import { BookModule } from './modules/BookModule';
+import { UserModule } from './modules/UserModule';
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { BookModule } from './modules/BookModule';
     ConfigModule.forRoot({ isGlobal: true }),
     AuthModule,
     MapperModule,
-    BookModule
+    BookModule,
+    UserModule,
   ],
 })
 export class AppModule {}
