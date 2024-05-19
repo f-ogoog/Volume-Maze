@@ -7,6 +7,7 @@ import { BookByIdPipe } from '../BookByIdPipe';
 import { UpdateBookStatusDto } from '../dtos/UpdateBookStatusDto';
 import { UpdateBookMarkDto } from '../dtos/UpdateBookMarkDto';
 import {UpdateBookDto} from "../dtos/UpdateBookDto";
+import {Status} from "@prisma/client";
 
 @Controller('/books')
 export class BookController {
@@ -69,5 +70,19 @@ export class BookController {
   ) {
     const book = await this.bookService.getById(bookId, req.user.id);
     return this.bookMapper.getBook(book);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Get('/status/:status')
+  async getAddedBooks (
+    @Req() req,
+    @Param('status') status: string,
+    @Query('pageSize') pageSize?: number
+  ) {
+    const books = await this.bookService.getAddedBooks(req.user.id, status, +pageSize);
+    return {
+      data: this.bookMapper.getBooks(books.data),
+      pagination: books.pagination,
+    }
   }
 }
