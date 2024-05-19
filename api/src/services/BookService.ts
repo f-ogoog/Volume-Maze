@@ -1,11 +1,11 @@
 import { ForbiddenException, Injectable } from '@nestjs/common';
 import { BookRepository } from '../repositories/BookRepository';
-import {Book, Mark, Prisma} from '@prisma/client';
+import { Prisma, Status } from '@prisma/client';
 import { DatabaseUtils } from '../database/DatabaseUtils';
 import { QueryAllBooksDTO } from '../dtos/QueryAllBooksDTO';
 import { UpdateBookStatusDto } from '../dtos/UpdateBookStatusDto';
 import { UpdateBookMarkDto } from '../dtos/UpdateBookMarkDto';
-import {UpdateBookDto} from "../dtos/UpdateBookDto";
+import { UpdateBookDto } from '../dtos/UpdateBookDto';
 
 @Injectable()
 export class BookService {
@@ -144,6 +144,42 @@ export class BookService {
         where,
       },
     });
+  }
+
+  async getAddedBooks (userId: string, status: string, pageSize?: number) {
+    const data: Prisma.BookFindManyArgs = {
+      where: this.getDataByStatus[status](userId),
+    };
+
+    return DatabaseUtils.paginate(this.bookRepository, { pageSize }, data);
+  }
+
+  private getDataByStatus = {
+    added: (userId) => ({
+      bookStatuses: {
+        some: {
+          userId,
+          status: Status.ADDED,
+        },
+      },
+    }),
+
+    read: (userId) => ({
+      bookStatuses: {
+        some: {
+          userId,
+          status: Status.READ,
+        },
+      },
+    }),
+
+    marked: (userId) => ({
+      marks: {
+        some: {
+          userId,
+        },
+      },
+    }),
   }
 }
 
