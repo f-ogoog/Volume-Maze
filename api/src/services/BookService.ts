@@ -18,7 +18,7 @@ export class BookService {
     const data: Prisma.BookFindManyArgs = {
       where: {
         AND: [
-          DatabaseUtils.getSearch(query, 'title', 'rating'),
+          DatabaseUtils.getSearch(query, 'title', 'author'),
           DatabaseUtils.getSearchByArray(query.category, 'category'),
         ],
       },
