@@ -23,9 +23,9 @@ export class BookMapper {
       category: book.category,
       descriptionTitle: book.descriptionTitle,
       description: book.description,
-      status: book.bookStatuses[0].status,
-      date: book.bookStatuses[0].date,
-      mark: book.marks[0].value,
+      status: book.bookStatuses[0]?.status || null,
+      date: book.bookStatuses[0]?.date || null,
+      mark: book.marks[0]?.value || null,
     }
   }
 }
