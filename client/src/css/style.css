@@ -1,0 +1,9 @@
+/* angkor-regular - latin */
+@font-face {
+  font-family: "Orelega One";
+  src: url("../fonts/OrelegaOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Spectral-Bold";
+  src: url("../fonts/Spectral-Bold.ttf");
+}

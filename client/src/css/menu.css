@@ -1,0 +1,65 @@
+#block_menu{
+    height: 100vh;
+    width: 6%;
+    margin-left: 0.5%;
+    position: fixed;
+    background-color: rgba(223, 211, 195, 0.70);
+    z-index: 2;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column; 
+    /* align-items: center; */
+    gap: 6.83vh;
+    overflow: hidden;
+    transition: width 0.5s ease; 
+}
+#block_menu:hover{
+    width: 28%;
+}
+.image_in_menu{
+    width: 50px;
+    display: block;
+    margin-left: 0.8vw;
+}
+.logo_img{
+    margin-left: 0.1vw;
+    max-width: 5vw;
+}
+.menu-item{
+    border: none;
+    background-color: #ffffff00;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-left: auto;
+    width: 100%;
+}
+#block_menu .menu-item:first-child {
+    margin-top: 50px;
+    margin-bottom: auto; /* Перший елемент розміщується вверху */
+}
+
+#block_menu .menu-item:last-child {
+    margin-top: auto; /* Останній елемент розміщується внизу */
+    margin-bottom: 50px;
+}
+.text_in_meny{
+    color: #703F7D;
+    text-align: center;
+    font-family: "Spectral-Bold";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.08px;
+    white-space: nowrap;
+    margin-left: 2vw;
+}
+#text_logo {
+    color: #292796;
+    font-family: "Orelega One";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

@@ -1,0 +1,202 @@
+@font-face {
+    font-family: "Orelega One";
+    src: url("../fonts/OrelegaOne-Regular.ttf");
+}
+@font-face {
+    font-family: "Spectral-Bold";
+    src: url("../fonts/Spectral-Medium.ttf");
+}
+
+body {
+    background-color: #F0ECE3;
+}
+
+#Savedsh_image{
+    flex: 1;
+    height: 7.13vh;
+    margin-top: 4.88vh;
+}
+
+#Savedsh_Top{
+    display: flex;
+    margin-top: 4.88vh;
+    margin-left:72.36vw ;
+    height: 73px;
+    flex-shrink: 0;
+}
+
+#Savedsh_Username{
+    display: flex;
+    text-align: right;
+    margin-top: 6.84vh;
+    margin-right: 2vw;
+    color: #292796;
+    font-family: "Orelega One";
+    font-size: 32px;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+#Savedsh_center{
+    margin-top:15vh ;
+}
+
+#Savedsh_labelsvd{
+    display: block;
+    margin-top:18.5vh;
+    margin-left:35vw;
+    color: #703F7D;
+    text-align: center;
+    font-family: "Orelega One";
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.6px;
+}
+
+#Savedsh_books{
+    display: flex;
+    margin-left:15.5vw;
+    width: 70vw;
+    gap: 90px;
+    text-align: right;
+    justify-content: center;
+    padding-bottom: 38px;
+    margin-top: 5.86vh;
+}
+.Savedsh_book{
+    width: 12.15vw;
+    border: none;
+    background-color: #ffffff00;
+}
+.Savedsh_Namebook{
+    margin-top: 10px;
+    width: 100%;
+    max-height: 40px;
+    color: #703F7D;
+    text-align: left;
+    font-family: "Spectral-Bold";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+
+    overflow: hidden;
+    white-space: normal;
+}
+
+.Savedsh_Author{
+    color: #2C2B87;
+    display: block;
+    margin-left: auto;
+    margin-right: 4px;
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1.1px;
+    margin-top: 5px;
+}
+.Savedsh_Date{
+    font-size: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: 4px;
+}
+#svdrothd{
+    border-bottom: 4px solid #9B8450;
+    width: 69.44vw;
+    display: block;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#Savedsh_button{
+    margin-bottom: 14.65vh;
+    margin-top: 6vh;
+    margin-left: 36.81vw;
+    text-align: center;
+    font-family: Spectral-Bold;
+    background-color: #9B8450; 
+    color:#F0ECE3;
+    padding:0.5vh 4vw  ;
+    border : none;
+    cursor: pointer;
+    font-size: 2vw;
+    width: 410px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+}
+.Savedsh_img{
+    height: 23.14vh;
+}
+.block_all_info_save{
+    margin-top: 40px;
+    border-radius: 15px;
+    width: 76.38vw;
+    background-color: #DFD3C3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 44px;
+    display: flex;
+    flex-direction: column;
+}
+.block_category_save{
+    padding-left: 84px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.text_in_all_block_save{
+    color: #2C2B87;
+
+    font-family: "Orelega One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.img_down_in_save_all{
+    width: 30px;
+    height: 30px;
+}
+.img_top_in_save_all{
+    width: 30px;
+    height: 43.29px;
+}
+.button_down_in_save_all{
+    margin-left: auto;
+    margin-right: 43px;
+    background: #0b097a00;
+    border: none;
+}
+.save_all_in_categor{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 90px;
+    text-align: right;
+    justify-content: center;
+    padding-bottom: 38px;
+    margin-top: 5.86vh;
+    max-height: 1000px;
+    align-items: start;
+    overflow-y: auto; 
+    overflow-x: hidden; 
+}
+.rothd{
+    border-bottom: 4px solid #9B8450;
+    width: 69.44vw;
+    display: block;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
