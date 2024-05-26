@@ -1,0 +1,219 @@
+@font-face {
+    font-family: "Orelega One";
+    src: url("../fonts/OrelegaOne-Regular.ttf");
+}
+@font-face {
+font-family: "Spectral-Bold";
+src: url("../fonts/Spectral-Bold.ttf");
+}
+  body {
+      margin: 0;
+      background-color: #F0ECE3;
+  }
+  
+  #Page_Top{
+    display: flex;
+    margin-left: 15.5vw;
+    margin-top: 22.36vh;
+  }
+  #Page_Texttop{
+    min-width: 50vw;
+    display: block;
+    z-index: 1;
+    /* border: 2px solid black; */
+  }
+  #Page_to_column{
+    /* border: 2px solid black; */
+    margin-left: auto;
+  }
+  #Page_namebook{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: #2C2B87;
+    text-align: right;
+    font-family: "Orelega One";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap
+  }
+  #Page_imgedit{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+  }
+  #Pagerate_text{
+    display: flex;
+    margin-top: 13px;
+  }
+  
+  #Page_Author{
+    display: flex;
+    color: #703F7D;
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.8px;
+  }
+  #Page_Cathegory{
+    display: flex;
+    color: #703F7D;
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  #Page_rothd{
+    margin-top: 13px;
+    margin-bottom: 20px;
+    border: 2px solid #DFD3C3;
+    width: 717px;
+    display: block;
+    border-radius: 20px;
+  }
+  #Page_rothd_end{
+    margin-top: 63px;
+    margin-bottom: 34px;
+    border: 2px solid #DFD3C3;
+    width: 76.18vw;
+    display: block;
+    border-radius: 20px;
+  }
+  #Page_Book{
+    height: 36.66vh;
+    z-index: 1;
+    margin-left: 53px;
+  }
+  
+  .circle {
+    margin-left: 37px;
+    border-radius: 50%;
+    display: block;
+    width: 102px;
+    height: 102px;
+    border: 8px solid #9B8450;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: #6f5b43;
+  }
+  
+  .stars {
+      font-size: 28px;
+      color: #000000;
+  
+  }
+  #Page_TopBottom{
+      display: flex;
+  }
+  #Page_ButtSave{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 307px;
+    margin-left: auto;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #DFD3C3;
+    color: #2C2B87;
+    border: none;
+    text-align: center;
+    font-family: "Spectral-Bold";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.8px;
+  }
+  #Page_Description{
+     margin-left:15.5vw; 
+  }
+  
+  #Page_H2{
+    color: #703F7D;
+    font-family: "Orelega One";
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.1px;
+    margin-bottom: 45px;
+  }
+  
+  #Page_H4{
+    color: #703F7D;
+    font-family: "Spectral-Bold";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 76.18vw;
+  }
+#book_fon{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+#name_book_in_page_book{
+  width: 54vw;
+  white-space: normal;
+  /* border: 2px solid black */
+}
+.button_stars_in_book{
+  background-color: #ffffff00;
+  border: none;
+  font-size: 30px;
+}
+#button_change_description_book{
+  background-color: #ffffff00;
+  border: none;
+}
+.class_change_description_book{
+  height: 600px;
+}
+#Page_ButtSave_description{
+  margin-top: 40px;
+  display: block;
+  width: 307px;
+    height: 40px;
+    margin-left: 25vw;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #DFD3C3;
+    color: #2C2B87;
+    border: none;
+    text-align: center;
+    font-family: "Spectral-Bold";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.8px;
+}
+.img_button_save_book{
+  display: block;
+  margin-left: auto;
+  margin-right: 25px;
+  width: 25px;
+  height: 25px;
+}
+#block_in_button_save_book{
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+.save_element_book{
+  margin-bottom: 10px;
+  background-color: #ffffff00;
+  border: none;
+}

@@ -1,0 +1,302 @@
+@font-face {
+    font-family: "Orelega One";
+    src: url("../fonts/OrelegaOne-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Spectral-Bold";
+    src: url("../fonts/Spectral-Medium.ttf");
+  }
+#block_Library{
+    margin-top: 50px;
+    width: 77.56vw;
+    /* height: 100px; */
+    /* border: 2px solid rgb(0, 0, 0); */
+    margin-left: auto;
+    margin-right: 6.94vw;
+}
+#block_prolile_in_library{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.Img_logo_library{
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+}
+#name_user_library{
+    color: #292796;
+
+    text-align: right;
+    font-family: "Orelega One";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#h1_in_library{
+    color: #703F7D;
+
+    margin-top: 30px;
+    text-align: right;
+    font-family: "Orelega One";
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.6px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+#all_block_sort_library{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+#block_search_labrary{
+    display: flex;
+}
+#input_searc_labrary{
+    width: 19.2vw;
+    height: 4.62vh;
+    padding-right: 49px;
+    color: #703F7D;
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 24px;
+    font-style: normal;
+    border-left: 3px solid #703F7D;
+    border-top: 3px solid #703F7D;
+    border-bottom: 3px solid #703F7D;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 15px 0 0 15px ;
+    background: #F0ECE3;
+    border-right: none;
+}
+#input_searc_labrary::placeholder {
+    color: #703F7D;
+}
+#button_search_labrary{
+    height: 4.62vh;
+    border-radius: 0 15px 15px 0 ;
+    background: #F0ECE3;
+    padding-right: 22px;
+    border-right: 3px solid #703F7D;
+    border-top: 3px solid #703F7D;
+    border-bottom: 3px solid #703F7D;
+    border-left: none;
+}
+#img_sort_labrary{
+    width: 30px;
+}
+.img_sort_labrary{
+    width: 40px;
+    margin-left: 20px;
+}
+#block_content_library{
+    margin-top: 31px;
+}
+/* Стиль для кнопки випадаючого меню */
+.dropbtn {
+    align-items: center;
+    font-family: "Spectral-Bold";
+    height: 4.62vh;
+    display: flex;
+    justify-content: end;
+    width: 19.23vw;
+    background-color: #f0ece2;
+    color: #703F7D;
+    font-size: 24px;
+    border: 3px solid #703F7D;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+/* Стиль для контейнера випадаючого меню (прихований за замовчуванням) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    margin-left: -28.5vw;
+    min-width: 47.77vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 20px;
+    z-index: 1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Стиль для секцій у випадаючому меню */
+.dropdown-section {
+    margin-bottom: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стиль для заголовків секцій */
+.dropdown-section h3 {
+    margin: 0 0 10px 0;
+    font-family: "Spectral-Bold";
+    font-size: 16px;
+    color: #703F7D;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+/* Стиль для міток і радіокнопок */
+.dropdown-section label {
+    display: block;
+    font-family: "Spectral-Bold";
+    margin: 5px 0;
+    color: #703F7D;
+    display: block;
+    margin-left: 1.5vw;
+    /* margin-right: auto; */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+/* Стиль для кнопки "Застосувати" */
+.apply-btn {
+    margin-top: 40px;
+    background-color: #2C2B87;
+    border-radius: 10px;
+    color: #F0ECE3;
+
+    text-align: center;
+    font-family: "Spectral-Bold";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input[type="radio"] {
+    background-color: #9c2626;
+} 
+
+/* Показати випадаюче меню при наведенні на кнопку */
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+#block_book_labrary{
+    width: 76.38vw;
+    justify-content: center;
+    background-color: #DFD3C3;
+    border-radius: 15px;
+    margin-top: 35px;
+    margin-left: 1vw;
+    display: grid;
+    padding-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 90px; /* Відстань між елементами */
+}
+.boock_in_library{
+    border: none;
+    max-width: 14.15vw;
+    height: 370px;
+    background-color: #4a444400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img_book_in_content{
+    height: 23.14vh;
+}
+.title_book {
+    margin-top: 10px;
+    /* border: 2px solid black; */
+    width: 100%;
+    max-height: 40px;
+    color: #703F7D;
+    text-align: left;
+    font-family: "Spectral-Bold";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+
+    overflow: hidden;
+    white-space: normal;
+}
+.autor_info_book{
+    color: #2C2B87;
+    display: block;
+    margin-left: auto;
+    margin-right: 4px;
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1.1px;
+    margin-top: 5px;
+}
+.raitink_book_info{
+    font-size: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: 4px;
+}
+#block_pages{
+    margin-top: 40px;
+    width: 100vw;
+    margin-left: -20%;
+    border-radius: 15px;
+    background-color: #DFD3C3;
+    margin-bottom: 60px;
+    justify-content: end;
+    display: flex;
+    /* border: 2px solid black; */
+    padding-right: 9.027vw;
+}
+#block_book_button_page{
+    height: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    gap: 32px;
+}
+.button_go_book_page{
+    background-color: #ffffff00;
+    border-radius: 15px;
+    border: 3px solid #703F7D;
+    width: 72px;
+    color: #703F7D;
+
+    text-align: center;
+    font-family: "Spectral-Bold";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.total_page_now{
+    background-color: #703f7de9;
+    color: #DFD3C3;
+}

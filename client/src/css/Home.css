@@ -1,0 +1,325 @@
+@font-face {
+    font-family: "Orelega One";
+    src: url("../fonts/OrelegaOne-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Spectral-Bold";
+    src: url("../fonts/Spectral-Medium.ttf");
+  }
+body {
+    background-color: #F0ECE3;
+    overflow-x: hidden;
+}
+
+h1{
+    text-align: right;
+    font-family: Orelega One;
+    color: #703F7D;
+    line-height: normal;
+    font-size: 5.6vw;
+    letter-spacing: 0.5vw;
+}
+#text_h2_main{
+    text-align: right;
+    font-family: "Spectral-Bold";
+    color: #703F7D;
+    margin-top: 2.92vh;
+    font-size: 3.1vh;
+    line-height: normal;
+    margin-left: 7vw;
+}
+
+#main{
+    display: flex;
+}
+#full_block{
+    display: flex;
+    flex-direction: column;
+}
+#image{
+    flex: 1;
+    width: 43.75vw;
+}
+#Textinfo{
+    flex: 1;
+    margin-top: 10vh;
+    text-align: right;
+    margin-right: 8.33vw;
+    margin-left: 0.5vw;
+}
+.custom-button {
+    margin-top: 12.5vh;;
+    text-align: center;
+    font-family: "Spectral-Bold";
+    background-color: #9B8450; 
+    color:#F0ECE3;
+    padding:1vh 5vw  ;
+    border-radius: 15px; 
+    border : none;
+    cursor: pointer;
+    font-size: 1.66vw;
+}
+#block_search{
+    display: flex;
+    margin-top: 11.94vh;
+    justify-content: end;
+}
+#input_searc{
+    width: 37.01vw;
+    height: 5.2vh;
+    padding-right: 49px;
+    color: #703F7D;
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 15px 0 0 15px ;
+    border: none;
+    background: rgba(223, 211, 195, 0.70);
+}
+#input_searc::placeholder {
+    color: #703F7D;
+}
+#button_search{
+    border-radius: 0 15px 15px 0 ;
+    border: none;
+    background: rgba(223, 211, 195, 0.70);
+    padding-right: 22px;
+}
+#img_search{
+    width: 30px;
+}
+#text_slayd{
+    color: #292796;
+
+    text-align: right;
+    font-family: "Orelega One";
+    font-size: 5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.6px;
+    margin-right: 8.26vw;
+}
+#block_all_slayder{
+    margin-top: 8.33vh;
+}
+#block_slider{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 100px;
+    margin-top: 7.42vh;
+    position: relative; /* Батьківський елемент */
+}
+#slider_line{
+    display: flex;
+    justify-content: center;
+    gap: 3.12vw;
+    transition: transform 1s ease;
+
+    /* transform: translateX(1000px); */
+}
+.element_slayd{
+    position: relative;
+    min-width: 68.68vw;
+    height: 475px;
+    border-radius: 15px;
+    background: #703F7D;
+    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.button_in_slayder{
+    position: absolute;
+    top: 50%; /* Розташовуємо його посередині вертикалі відносно верхнього краю батьківського блока */
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: #ffffff00;
+    border: none;
+}
+#button_left_slayd{
+    margin-left: 2.77vw;
+}
+#button_right_slayd{
+    right: 2.77vw;
+}
+.image_fon_main{
+    width: 30vw;
+    /* height: 85vh; */
+}
+#block_folder{
+    width: 100vw;
+    background: rgba(223, 211, 195, 0.70);
+
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10) inset;
+    display: flex;
+    justify-content: center;
+    gap: 9.23vw;
+}
+.block_navigation{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column; 
+    margin-top: 70px;
+    margin-bottom: 60px;
+    gap: 10px;
+}
+#text_in_block_folder{
+    color: #9B8450;
+
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 3.6px;
+    margin-top: auto;
+    margin-bottom: 60px
+}
+.text_in_block_folder_blue{
+    color: #2C2B87;
+
+    text-align: right;
+    font-family: "Orelega One";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.44px;
+}
+.block_in_slays_hame_book{
+    display: flex;
+    align-items: end;
+    /* justify-content: center; */
+
+}
+.button_navigation, .text_team_name{
+    color: #703F7D;
+    text-decoration: none;
+
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+    background-color: #ffffff00;
+}
+.block_left_in_stayd_home{
+    width: 31.59vw;
+    /* border: 2px solid black; */
+    position: absolute;
+    margin-left: 5.48vw;
+    top: 50%;                         /* 3 */
+    transform: translate(0, -50%)
+}
+.title_book_in_home{
+    color: #F0ECE3;
+
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.autor_book_in_home{
+    color: #F0ECE3;
+
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.raitink_book_info_home{
+    font-size: 30px;
+    margin-top: 10px;
+    display: block;
+    text-align: right;
+    margin-right: 4px;
+
+}
+.description_book_home{
+    color: #F0ECE3;
+
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.Open_book_in_home{
+    border-radius: 15px;
+    background: #D9D9D9; 
+    width: 21.31vw;
+    height: 50px;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-top: 20px;
+}
+.img_slayder_home{
+    height: 37.96vh;
+    /* display: block; */
+    display: flex;
+    position: absolute;
+    margin-left: 60%;               /* 2 */
+    top: 50%;                         /* 3 */
+    transform: translate(0, -50%)
+}
+@media (max-width: 1400px) {
+    /* h1{
+        font-size: 5vw;
+    } */
+    #text_h2_main{
+        /* margin-top: 2.92vh; */
+        font-size: 2.6vh;
+        /* margin-left: 7vw; */
+    }
+    #block_search{
+        margin-top: 8vh;
+    }
+}
+@media (max-width: 1200px) {
+    #text_h2_main{
+        /* margin-top: 2.92vh; */
+        font-size: 2vh;
+        /* margin-left: 7vw; */
+    }
+    #input_searc{
+        /* width: 37.01vw; */
+        height: 4.6vh;
+        font-size: 20px;
+    }
+    #block_search{
+        margin-top: 7vh;
+    }
+}
+@media (max-width: 1000px) {
+    #text_h2_main{
+        /* margin-top: 2.92vh; */
+        font-size: 1.7vh;
+        /* margin-left: 7vw; */
+    }
+    #block_search{
+        margin-top: 5vh;
+    }
+    #input_searc{
+        width: 37.01vw;
+        height: 4.6vh;
+        font-size: 20px;
+    }
+    #input_searc{
+        /* width: 37.01vw; */
+        height: 3.8vh;
+        font-size: 19px;
+    }
+    #img_search{
+        width: 25px;
+    }
+}

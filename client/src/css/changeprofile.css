@@ -1,0 +1,82 @@
+#change_pass_text{
+    margin-top: 14.6vh;
+}
+.element_text_profile{
+    color: #2C2B87;
+
+    text-align: right;
+    font-family: "Orelega One";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#butoon_change_pass{
+    margin-top: 9.76vh;
+    background-color: #703F7D;
+    width: 100%;
+    height: 5.3vh;
+    border-radius: 20px;
+    float: right;
+    border: none;
+    color: #F0ECE3;
+    text-align: center;
+    font-family: "Spectral-Bold";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.change_pass_input{
+    margin-top: 60px;
+    text-align: end;
+    padding-right: 10%;
+    color: #703F7D;
+
+    text-align: right;
+    font-family: "Spectral-Bold";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+.change_pass_input::placeholder {
+    color: #703F7D;
+}
+#change_discription{
+    margin-top: 30px;
+}
+#change_name{
+    margin-top: 100px;
+}
+.input_big_info{
+    height: 24.07vh;
+    font-size: 28px;
+    color: #703F7D;
+    font-family: "Spectral-Bold";
+}
+#block_in_change_profile{
+    display: flex;
+    gap: 95px;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+}
+#change_logo_img{
+    height: 16.85vh;
+}
+#butoon_save_change{
+    width: 22.08vw;
+}
+#change_name_input{
+    color: #703F7D;
+    font-size: 28px;
+    font-family: "Spectral-Bold";
+    text-align: right;
+    padding-right: 15px;
+}
+#button_change_img{
+    background-color: #ffffff00;
+    border: none;
+}

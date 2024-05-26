@@ -1,0 +1,180 @@
+@font-face {
+    font-family: "Orelega One";
+    src: url("../fonts/OrelegaOne-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Spectral-Bold";
+    src: url("../fonts/Spectral-Bold.ttf");
+  }
+  
+  
+  #profile_editButt{
+      width:30.56vw;
+      height:5.8vh ;
+      margin-bottom: 6.84vh;
+      text-align: center;
+      font-family: "Spectral-Bold";
+      background-color: #9B8450; 
+      color:#F0ECE3;
+      padding:0.5vh 4vw  ;
+      border-radius: 15px; 
+      border : none;
+      cursor: pointer;
+      font-size: 2vw;
+      } 
+  
+  #profile_Top{
+    display: flex;
+    margin-right:8.33vw ;
+    margin-left:15.49vw ;
+    margin-top:7.33vh;
+  }
+  
+  #profile_LabelTop{
+      font-family: "Orelega One";
+      color: #292796;
+      font-size: 48px;
+    }
+  
+  #profile_TextTop{
+      font-family: "Spectral-Bold";
+      color: #703F7D;
+      width: 61.94vw;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  #user{
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+  }
+  #Texttop{
+    display: block;
+    text-align: right;
+    margin-right:2.78vw ;
+  }
+  
+  #rothd{
+    border-bottom: 4px solid #9B8450;
+    width: 76.18vw;
+    display: block;
+    margin-top: 45px;
+    margin-left:15.5vw ;
+    margin-right: 8.33vw;
+    border-radius: 20px;
+  }
+  
+  #profile_Bottom{
+    display: flex;
+  }
+  .profile_h2{
+    margin-left: auto;
+    margin-right: auto;
+      color: #2C2B87;
+      text-align: center;
+      font-family: "Orelega One";
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 3.6px;
+      margin-bottom: 50px;
+    }
+  .profile_h3{
+      color: #703F7D;
+      font-family: "Spectral-Bold";
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  .profile_h3_in_read{
+      margin-left: auto;
+      color: #703F7D;
+      font-family: "Spectral-Bold";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+  }
+  #profile_LeftBottom{
+    display: block;
+    margin-left:20.5vw ;
+    margin-right:5.07vw;
+    margin-bottom:11.3vh;
+    margin-top:11.72vh ;
+    }
+  #profile_Statistics{
+      display: block;
+      width:30.56vw;
+      height:37.11vh;
+      background-color: rgba(223, 211, 195, 0.70);;
+      border-radius: 5px;
+      flex-shrink: 0;
+  }
+  
+  #profile_Last_read{
+    display: block;
+    width:35.56vw;
+    height:66.8vh ;
+    background-color: rgba(223, 211, 195, 0.70);;
+    border-radius: 5px;
+    margin-right:5.07vw;
+    margin-bottom:1.74vh;
+    margin-top:2.44vh ;
+  
+  }
+  .profile_Book1{
+    border: none;
+    align-items: center;
+    padding-right: 46px;
+    display: flex;
+    flex-shrink: 0;
+    margin-top:4.88vh;
+    margin-bottom:3.9vh;
+    margin-left:2vw;
+    width: 31.60vw;
+    height:14.16vh;
+    border-radius: 5px;
+    background: #DFD3C3;
+    text-align: right;
+  
+  }
+  #profile_Book2{
+    display: flex;
+    flex-shrink: 0;
+    margin-top:3.9vh;
+    margin-bottom:3.9vh;
+    margin-left:2vw;
+    width: 31.60vw;
+    height:14.16vh;
+    border-radius: 5px;
+    background: #DFD3C3;
+    text-align: right;
+  }
+  #profile_Book3{
+    display: flex;
+    flex-shrink: 0;
+    margin-top:3.9vh;
+    margin-bottom:3.9vh;
+    margin-left:2vw;
+    width: 31.60vw;
+    height:14.16vh;
+    border-radius: 5px;
+    background: #DFD3C3;
+    text-align: right;
+  }
+.save_boob_profile{
+  display: flex;
+  margin-left: 30px;
+  margin-bottom: 27px;
+}
+.len_element_profile{
+  margin-left: auto;
+  margin-right: 40px;
+}
+.img_boor_read_profile{
+  height: 14vh;
+}
